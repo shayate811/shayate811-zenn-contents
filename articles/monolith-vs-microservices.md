@@ -47,7 +47,7 @@ https://github.com/shayate811/learning/tree/main/arichitecture-poc
 
 ![](/images/monolith-vs-microservices/pocArchitecture.png)
 
-```docker-compose.yml
+```docker-compose
 services:
   # --- モノリス ---
   monolith:
