@@ -47,6 +47,68 @@ https://github.com/shayate811/learning/tree/main/arichitecture-poc
 
 ![](/images/monolith-vs-microservices/pocArchitecture.png)
 
+```docker-compose.yml
+services:
+  # --- モノリス ---
+  monolith:
+    build: .
+    volumes:
+      - ./monolith:/app
+      - ./telemetry.py:/telemetry.py
+    ports:
+      - "8001:8000"
+
+  # --- マイクロサービス群 ---
+  order:
+    build: .
+    volumes:
+      - ./microservices/order:/app
+      - ./telemetry.py:/telemetry.py
+    ports:
+      - "8002:8000"
+    depends_on:
+      - payment
+      - inventory
+      - jaeger # (あれば)
+
+  payment:
+    build: .
+    volumes:
+      - ./microservices/payment:/app
+      - ./telemetry.py:/telemetry.py
+    expose:
+      - "8000"
+
+  inventory:
+    build: .
+    volumes:
+      - ./microservices/inventory:/app
+      - ./telemetry.py:/telemetry.py
+    expose:
+      - "8000"
+
+  # 4. 負荷試験ツール (Locust)
+  load-test:
+    image: locustio/locust
+    volumes:
+      - ./locustfile.py:/mnt/locust/locustfile.py
+    ports:
+      - "8089:8089"
+    command: -f /mnt/locust/locustfile.py
+    depends_on:
+      - monolith
+      - order
+
+  # --- Jaeger (All-in-one) ---
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    ports:
+      - "16686:16686" # 管理画面 (UI)
+      - "4317:4317" # データ受信 (OTLP gRPC)
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+```
+
 1.  **モノリス構成 (Monolith)**
     - 1 つのコンテナ内で、「注文」「決済」「在庫」の処理を**関数呼び出し**として実行する。
 2.  **マイクロサービス構成 (Microservices)**
