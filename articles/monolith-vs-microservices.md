@@ -2,7 +2,18 @@
 title: "【検証】モノリス vs マイクロサービス：通信オーバーヘッドをPoCで実測してみた"
 emoji: "💸"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["architect", "アーキテクト", "初心者", "microservices", "jaeger"]
+topics:
+  [
+    "architect",
+    "アーキテクト",
+    "Python",
+    "Docker",
+    "Locust",
+    "初心者",
+    "microservices",
+    "jaeger",
+    "OpenTelemetry",
+  ]
 published: true
 ---
 
