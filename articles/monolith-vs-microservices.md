@@ -8,7 +8,7 @@ published: true
 
 ## はじめに
 
-「ソフトウェアアーキテクチャの第一法則」をご存知でしょうか？
+「ソフトウェアアーキテクチャの第一法則」をご存知でしょうか。
 https://zenn.dev/shayate811/articles/software-architecture-bookreview
 
 > **"ソフトウェアアーキテクチャはトレードオフがすべてだ"**
