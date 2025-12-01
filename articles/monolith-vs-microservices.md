@@ -1,5 +1,5 @@
 ---
-title: "【検証】モノリス vs マイクロサービス：通信オーバーヘッドをPoCで実測してみた"
+title: "【検証】マイクロサービス化で通信遅延は倍増？Python/FastAPIでオーバーヘッドを実測比較してみた"
 emoji: "💸"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics:
