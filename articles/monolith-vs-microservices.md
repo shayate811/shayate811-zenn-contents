@@ -35,6 +35,8 @@ https://github.com/shayate811/learning/tree/main/arichitecture-poc
 
 ### 比較するアーキテクチャ
 
+![](/images/monolith-vs-microservices/pocArchitecture.png)
+
 1.  **モノリス構成 (Monolith)**
     - 1 つのコンテナ内で、「注文」「決済」「在庫」の処理を**関数呼び出し**として実行する。
 2.  **マイクロサービス構成 (Microservices)**
