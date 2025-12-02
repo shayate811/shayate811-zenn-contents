@@ -1,8 +1,9 @@
 ---
-title: "【検証】マイクロサービスで「データ整合性」は守れるか？分散トランザクション(Saga)を実装して崩壊させてみた"
+title: "【検証】分散トランザクション(Saga)は「データ不整合」を防げるか？あえて障害を起こして自動修復させてみた"
 emoji: "💥"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["python", "fastapi", "docker", "microservices", "architecture"]
+topics:
+  ["分散トランザクション", "fastapi", "Saga", "microservices", "architecture"]
 published: true
 ---
 
