@@ -1,14 +1,14 @@
 ---
-title: "【Dev Containers】脱localhost。マイクロサービス開発で本番と同じ通信経路で開発する重要性にいまさら気づいた。"
+title: "【学生・初心者】Dev Containersで脱localhost マイクロサービス開発で本番と同じ通信経路で開発する重要性にいまさら気づいた"
 emoji: "🐳"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["docker", "初心者", "DevContainers", "microservices", "Kubernetes"]
+topics: ["docker", "初心者", "DevContainers", "microservices", "architecture"]
 published: true
 ---
 
 ## はじめに
 
-「Dev Containers (VS Code Remote Containers) って便利そうだよね。環境構築がコマンド一発で終わるんでしょ？」
+「vscode 拡張機能の Dev Containers って便利そうだよね。環境構築がコマンド一発で終わるんでしょ？」
 
 正直、導入するまで私の認識はこの程度でした。
 しかし、実際にマイクロサービスの検証環境を作ってみて、その認識は **完全に間違っていた（浅かった）** と気づきました。
