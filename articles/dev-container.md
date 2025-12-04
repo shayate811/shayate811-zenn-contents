@@ -28,10 +28,10 @@ https://zenn.dev/shayate811/articles/microservices-saga-poc
 
 ```mermaid
 graph TD
-User["自分 (Mac/Localhost)"] -->|Port Forwarding| Order["Order Service Container"]
-Order -->|Docker Network| Payment["Payment Service Container"]
+    User["自分 (Mac/Localhost)"] -->|Port Forwarding| Order["Order Service Container"]
+    Order -->|Docker Network| Payment["Payment Service Container"]
 
-    style User fill:#f9f,stroke:#333
+    classDef default fill:#6d4c41,stroke:#fff,stroke-width:2px,color:#fff;
 ```
 
 **After: コンテナの中の世界 （本記事）**
@@ -39,17 +39,18 @@ Order -->|Docker Network| Payment["Payment Service Container"]
 
 ```mermaid
 graph TD
-subgraph Docker_Network [Docker Network]
-User["自分 (VS Code Dev Container)"]
-Order["Order Service Container"]
-Payment["Payment Service Container"]
+    subgraph Docker_Network [Docker Network]
+        User["自分 (VS Code Dev Container)"]
+        Order["Order Service Container"]
+        Payment["Payment Service Container"]
 
         User -->|Direct Access| Order
         User -->|Direct Access| Payment
         Order -->|Internal DNS| Payment
     end
 
-    style User fill:#bbf,stroke:#333
+    classDef default fill:#00796b,stroke:#fff,stroke-width:2px,color:#fff;
+    style Docker_Network fill:none,stroke:#ccc,stroke-width:2px,stroke-dasharray: 5 5,color:#ccc
 ```
 
 ## これまでの誤解： "外" からの操作
