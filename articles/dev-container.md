@@ -1,5 +1,5 @@
 ---
-title: "【学生・初心者】Dev Containersで脱localhost マイクロサービス開発で本番と同じ通信経路で開発する重要性にいまさら気づいた"
+title: "【学生・初心者】Dev Containersマイクロサービス開発で本番と同じ通信経路で開発する重要性にいまさら気づいた"
 emoji: "🐳"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["docker", "初心者", "DevContainers", "microservices", "architecture"]
