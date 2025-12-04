@@ -37,8 +37,6 @@ graph TD
 **After: コンテナの中の世界 （本記事）**
 自分も「壁の中」に入り、各サービスと対等な位置にいる状態。サービス名で通信する Kubernetes の要になる考え方。
 
-実装:
-
 https://github.com/shayate811/DevContainersLearning
 
 ```mermaid
