@@ -1,5 +1,5 @@
 ---
-title: "「風が吹けば桶屋が儲かる」をPythonで因果推論してみた 〜相関の罠 vs 因果〜"
+title: "「風が吹けば桶屋が儲かる」をPythonで因果推論してみた 〜擬似相関と交絡因子の罠 vs 因果〜"
 emoji: "🌪️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["python", "データサイエンス", "因果推論", "統計学", "MLOps"]
